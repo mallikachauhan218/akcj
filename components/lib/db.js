@@ -14,3 +14,11 @@ export const createConnection = async () => {
 
     return connection;
 }
+
+// Add this missing export to fix the compilation error
+export const closeConnection = async () => {
+    if (connection) {
+        await connection.end();
+        connection = null; // Reset the variable so it can re-open on the next request
+    }
+}

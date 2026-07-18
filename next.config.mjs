@@ -17,6 +17,11 @@ const nextConfig = {
       },
     ],
   },
+  compiler: {
+    // Highlight-start: Enable styled-components support
+    styledComponents: true,
+    // Highlight-end
+  },
 };
 
 export default nextConfig;
